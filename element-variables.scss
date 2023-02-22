@@ -1121,34 +1121,34 @@ $--link-info-font-color: $--color-info !default;
 /* Calendar
 --------------------------*/
 /// border||Other|4
-$--calendar-border: $--table-border !default;
+$--calendar-border: $--color-border-normal !default;
 /// color||Other|4
-$--calendar-selected-background-color: #F2F8FE !default;
-$--calendar-cell-width: 85px !default;
+$--calendar-selected-background-color: $--color-bg-1 !default;
+$--calendar-cell-width: 64px !default;
 
 /* Form
 -------------------------- */
-/// fontSize||Font|1
+/// fontSize||Font|1，我们的form比较特殊，这里先不改了，保证文字大小一致即可
 $--form-label-font-size: $--font-size-base !default;
 
 /* Avatar
 --------------------------*/
 /// color||Color|0
-$--avatar-font-color: #fff !default;
+$--avatar-font-color: $--color-text-white !default;
 /// color||Color|0
-$--avatar-background-color: #C0C4CC !default;
+$--avatar-background-color: $--color-gray-4 !default;
 /// fontSize||Font Size|1
-$--avatar-text-font-size: 14px !default;
+$--avatar-text-font-size: $--font-size-medium !default;
 /// fontSize||Font Size|1
-$--avatar-icon-font-size: 18px !default;
+$--avatar-icon-font-size: 16px !default;
 /// borderRadius||Border|2
 $--avatar-border-radius: $--border-radius-base !default;
 /// size|1|Avatar Size|3
 $--avatar-large-size: 40px !default;
 /// size|1|Avatar Size|3
-$--avatar-medium-size: 36px !default;
+$--avatar-medium-size: 32px !default;
 /// size|1|Avatar Size|3
-$--avatar-small-size: 28px !default;
+$--avatar-small-size: 24px !default;
 
 /* Empty
 -------------------------- */
@@ -1157,7 +1157,7 @@ $--empty-image-width: 160px !default;
 $--empty-description-margin-top: 20px !default;
 $--empty-bottom-margin-top: 20px !default;
 
-/* Descriptions
+/* Descriptions 不知道这个组件是干啥的
 -------------------------- */
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
@@ -1166,12 +1166,12 @@ $--descriptions-item-bordered-label-background: #fafafa !default;
 
 /* Skeleton 
 --------------------------*/
-$--skeleton-color: #f2f2f2 !default;
-$--skeleton-to-color: #e6e6e6 !default;
+$--skeleton-color: $--color-opacity-1!default;
+$--skeleton-to-color:$--color-opacity-2 !default;
 
 /* Svg
 --------------- */
-$--svg-monochrome-grey: #DCDDE0 !default;
+$--svg-monochrome-grey: $--color-gray-1 !default;
 
 /* Result
 -------------------------- */
@@ -1181,10 +1181,10 @@ $--result-title-font-size: 20px !default;
 $--result-title-margin-top: 20px !default;
 $--result-subtitle-margin-top: 10px !default;
 $--result-extra-margin-top: 30px !default;
-$--result-info-color: $--color-info !default;
-$--result-success-color: $--color-success !default;
-$--result-warning-color: $--color-warning !default;
-$--result-danger-color: $--color-danger !default;
+$--result-info-color: $--color-text-caption !default;
+$--result-success-color: $--color-success-normal !default;
+$--result-warning-color: $--color-warning-normal !default;
+$--result-danger-color: $--color-danger-normal !default;
 
 /* Break-point
 --------------------------*/
