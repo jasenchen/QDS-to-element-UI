@@ -6,21 +6,173 @@
 
 /* Transition
 -------------------------- */
-$--all-transition: all .3s cubic-bezier(.645,.045,.355,1) !default;
-$--fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$--all-transition: all .3s cubic-bezier(0.36, 0.01, 0.1, 1) !default;
+$--fade-transition: opacity 300ms cubic-bezier(0.36, 0.01, 0.1, 1) !default;
 $--fade-linear-transition: opacity 200ms linear !default;
-$--md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1), opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) !default;
-$--border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1) !default;
-$--color-transition-base: color .2s cubic-bezier(.645,.045,.355,1) !default;
+$--md-fade-transition: transform 300ms cubic-bezier(0, 0, 0.2, 1), opacity 300ms cubic-bezier(0, 0, 0.2, 1) !default;
+$--border-transition-base: border-color .2s cubic-bezier(0.36, 0.01, 0.1, 1) !default;
+$--color-transition-base: color .2s cubic-bezier(0.36, 0.01, 0.1, 1) !default;
 
 /* Color
 -------------------------- */
+
+// qidian global color
+// --------------------------
+
+// brand
+$--color-brand-0: #F1F6FF; /* - */
+$--color-brand-1: #DBE8FF; /* - */
+$--color-brand-2: #B7CEFF; /* - */
+$--color-brand-3: #93B1FF; /* - */
+$--color-brand-4: #6E92FF; /* focus */
+$--color-brand-5: #4a70ff; /* normal */
+$--color-brand-6: #3856DB; /* hover */
+$--color-brand-7: #293EB6; /* active */
+$--color-brand-8: #1C2A92;
+$--color-brand-9: #12196D;
+
+//blue
+$--color-blue-0: #ECF9FF;
+$--color-blue-1: #D0EFFF;
+$--color-blue-2: #A1DDFF;
+$--color-blue-3: #72C7FF;
+$--color-blue-4: #43AEFF; /* focus */
+$--color-blue-5: #1492FF; /* normal */
+$--color-blue-6: #1075DB; /* hover */
+$--color-blue-7: #0B5BB6; /* active */
+$--color-blue-8: #084492;
+$--color-blue-9: #052F6D;
+
+//green
+$--color-green-0: #E6F8EF; /* - */
+$--color-green-1: #C0EBD7;
+$--color-green-2: #8CDEBB;
+$--color-green-3: #5ED1A3;
+$--color-green-4: #34C48F; /* focus */
+$--color-green-5: #0FB87F; /* normal */
+$--color-green-6: #0B9D72; /* hover */
+$--color-green-7: #088362; /* active */
+$--color-green-8: #066952;
+$--color-green-9: #044F40;
+
+//yellow
+$--color-yellow-0: #FEFDEC;
+$--color-yellow-1: #FDF8D1;
+$--color-yellow-2: #FBF0A3;
+$--color-yellow-3: #FAE476;
+$--color-yellow-4: #F9D64A; /* focus */
+$--color-yellow-5: #F7C51E; /* normal */
+$--color-yellow-6: #D4A217; /* hover */
+$--color-yellow-7: #B18110; /* active */
+$--color-yellow-8: #8D620B;
+$--color-yellow-9: #6A4607;
+
+//amber
+$--color-amber-0: #fff9ef;
+$--color-amber-1: #fff0d7;
+$--color-amber-2: #ffdfae;
+$--color-amber-3: #ffcd86;
+$--color-amber-4: #ffb95e;
+$--color-amber-5: #ffa436;
+$--color-amber-6: #db8829;
+$--color-amber-7: #b66c1e;
+$--color-amber-8: #925314;
+$--color-amber-9: #6d3b0d;
+
+//orange
+$--color-orange-0: #FFF8F0;
+$--color-orange-1: #FFEBDA;
+$--color-orange-2: #FFD5B5;
+$--color-orange-3: #FFBC8F;
+$--color-orange-4: #FFA16A; /* focus */
+$--color-orange-5: #FF8345; /* normal */
+$--color-orange-6: #DB6634; /* hover */
+$--color-orange-7: #B64D26; /* active */
+$--color-orange-8: #92361A;
+$--color-orange-9: #6D2310;
+
+//red
+$--color-red-0: #FEF3F1; /* - */
+$--color-red-1: #FDE0DC; /* - */
+$--color-red-2: #FBBFB9; /* - */
+$--color-red-3: #FA9C97; /* - */
+$--color-red-4: #F97875; /* focus */
+$--color-red-5: #f75559; /* normal */
+$--color-red-6: #D44047; /* hover */
+$--color-red-7: #B12F3A; /* active */
+$--color-red-8: #8D202D; /* - */
+$--color-red-9: #6A1421; /* - */
+
+//purple
+$--color-purple-0: #F4EEFC; /* - */
+$--color-purple-1: #E2D5F8; /* - */
+$--color-purple-2: #C6AFF3; /* - */
+$--color-purple-3: #A98AEF; /* - */
+$--color-purple-4: #8A67EA; /* focus */
+$--color-purple-5: #6A45E5; /* normal */
+$--color-purple-6: #5134C5; /* hover */
+$--color-purple-7: #3B26A4; /* active */
+$--color-purple-8: #281A83; /* - */
+$--color-purple-9: #191062; /* - */
+
+//gray
+$--color-gray-0: #f7f8fa; /* - */
+$--color-gray-1: #f4f5f7; /* - */
+$--color-gray-2: #eceef1; /* divider 分割线 */
+$--color-gray-3: #e0e2e7; /* - */
+$--color-gray-4: #cdd0d9; /* - */
+$--color-gray-5: #b4b8c4; /* - */
+$--color-gray-6: #979baa; /* 说明文字 */
+$--color-gray-7: #777c8d; /* - */
+$--color-gray-8: #5b5f70; /* - */
+$--color-gray-9: #434756; /* - */
+$--color-gray-10: #313441; /* - */
+$--color-gray-11: #232530; /* - */
+$--color-gray-12: #191b23; /* - */
+$--color-gray-13: #121319; /* - */
+
+
+//opacity
+$--color-opacity-0: rgba(54,79,129,0.04); /* hsla(220,41%,36%,0.04) */
+$--color-opacity-1: rgba(36,56,97,0.05); /* hsla(220,46%,26%,0.05) */
+$--color-opacity-2: rgba(18,42,79,0.08); /* hsla(216,63%,19%,0.08) */
+$--color-opacity-3: rgba(17,32,70,0.13); /* hsla(223,61%,17%,0.13) */
+$--color-opacity-4: rgba(6,21,66,0.20); /* hsla(225,86%,14%,0.2) */
+$--color-opacity-5: rgba(5,18,56,0.30); /* hsla(225,84%,12%,0.3) */
+$--color-opacity-6: rgba(1,11,50,0.41); /* hsla(227,96%,10%,0.41) */
+$--color-opacity-7: rgba(3,12,43,0.54); /* hsla(227,87%,9%,0.54) */
+$--color-opacity-8: rgba(3,10,38,0.65); /* hsla(229,84%,8%,0.65) */
+$--color-opacity-9: rgba(1,7,30,0.74); /* hsla(228,93%,6%,0.74) */
+$--color-opacity-10: rgba(1,4,19,0.81); /* hsla(231,91%,4%,0.81) */
+$--color-opacity-11: rgba(2,4,18,0.87); /* hsla(232,79%,4%,0.87) */
+$--color-opacity-12: rgba(2,4,13,0.91); /* hsla(229,73%,3%,0.91) */
+$--color-opacity-13: rgba(0,1,10,0.93); /* hsla(233,100%,2%,0.93) */
+
+//white
+$--white: #ffffff; /* 常量 */
+
+//black
+$--black: #000000; /* 常量 */
+
+//primary
+$--color-primary-normal: var(--color-brand-5); /* 主要颜色 */
+$--color-primary-hover: var(--color-brand-6); /* hover */
+$--color-primary-active: var(--color-brand-7); /* active */
+$--color-primary-focus: var(--color-brand-3); /* focus */
+$--color-primary-disable: var(--color-brand-2); /* disable */
+$--color-primary-light: var(--color-brand-0); /* light */
+$--color-primary-text: var(--color-brand-9); /* - */
+$--color-primary-light-normal: var(--color-brand-0); /* light */
+$--color-primary-light-hover: var(--color-brand-1); /* light-hover */
+$--color-primary-light-active: var(--color-brand-2); /* light-active */
+
+
 /// color|1|Brand Color|0
-$--color-primary: yellow !default;
+$--color-primary: $--color-brand-5 !default;
 /// color|1|Background Color|4
-$--color-white: red !default;
+$--color-white: $--white !default;
 /// color|1|Background Color|4
-$--color-black: green !default;
+$--color-black: $--black !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
 $--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
 $--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
@@ -31,31 +183,47 @@ $--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /
 $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
 /// color|1|Functional Color|1
-$--color-success: #67C23A !default;
+$--color-success: $--color-green-5 !default;
 /// color|1|Functional Color|1
-$--color-warning: #E6A23C !default;
+$--color-warning: $--color-orange-5 !default;
 /// color|1|Functional Color|1
-$--color-danger: #F56C6C !default;
+$--color-danger: $--color-red-5 !default;
 /// color|1|Functional Color|1
-$--color-info: #909399 !default;
+$--color-info: $--color-opacity-6 !default;
 
-$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
-$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
-$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
-$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+$--color-success-light: $--color-green-1 !default;
+$--color-warning-light: $--color-orange-1 !default;
+$--color-danger-light: $--color-red-1 !default;
+$--color-info-light: $--color-opacity-2 !default;
 
-$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
-$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
-$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
-$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+$--color-success-lighter: $--color-green-0 !default;
+$--color-warning-lighter: $--color-orange-0 !default;
+$--color-danger-lighter: $--color-red-0 !default;
+$--color-info-lighter: $--color-opacity-1 !default;
+
+//qidian text color
+$--color-text-primary: var(--color-opacity-13); /* - */
+$--color-text-secondary: var(--color-opacity-8); /* 次要 */
+$--color-text-caption: var(--color-opacity-6); /* 说明 */
+$--color-text-disable: var(--color-opacity-4); /* 不可用 */
+$--color-text-white: var(--white); /* 用于深色底的白色文字 */
+$--color-text-black: var(--black); /* 用于浅彩色底的黑色文字 */
+
 /// color|1|Font Color|2
-$--color-text-primary: #303133 !default;
+$--color-text-primary: $--color-opacity-13 !default;
 /// color|1|Font Color|2
-$--color-text-regular: #606266 !default;
+$--color-text-regular: $--color-opacity-8 !default;
 /// color|1|Font Color|2
-$--color-text-secondary: #909399 !default;
+$--color-text-secondary: $--color-opacity-6 !default;
 /// color|1|Font Color|2
-$--color-text-placeholder: #C0C4CC !default;
+$--color-text-placeholder: $--color-opacity-4 !default;
+
+//qidian border color
+$--color-border-normal: var(--color-opacity-3);
+$--color-border-hover: var(--color-opacity-4);
+$--color-border-active: var(--color-brand-1); /* active */
+$--color-border-disable: var(--color-opacity-2); /* 不可用 */
+
 /// color|1|Border Color|3
 $--border-color-base: #DCDFE6 !default;
 /// color|1|Border Color|3
@@ -67,29 +235,41 @@ $--border-color-extra-light: #F2F6FC !default;
 
 // Background
 /// color|1|Background Color|4
-$--background-color-base: #F5F7FA !default;
+/// qidian bg color
+$--color-bg-0: var(--color-white); /* 最底层背景色 */
+$--color-bg-1: var(--color-white); /* 强调背景色（弹框类，控件类） */
+$--color-bg-2: var(--color-white); /* 最上层背景色（气泡类、通知类） */
+$--color-bg-contrast: var(--color-gray-0); /* 对比背景色 */
+$--color-overlay: rgba(18,19,25,0.32); /* 蒙层颜色 */
+
+$--background-color-base: $--color-bg-0 !default;
 
 /* Link
 -------------------------- */
-$--link-color: $--color-primary-light-2 !default;
-$--link-hover-color: $--color-primary !default;
+$--link-color: $--color-primary-normal !default;
+$--link-hover-color: $--color-primary-hover !default;
 
 /* Border
 -------------------------- */
 $--border-width-base: 1px !default;
 $--border-style-base: solid !default;
-$--border-color-hover: $--color-text-placeholder !default;
-$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-color-hover: $--color-border-hover !default;
+$--border-base: $--border-width-base $--border-style-base $--color-border-normal !default;
 /// borderRadius|1|Radius|0
-$--border-radius-base: 4px !default;
+$--border-radius-base: 3px !default;
 /// borderRadius|1|Radius|0
-$--border-radius-small: 2px !default;
+$--border-radius-small: 1.5px !default;
 /// borderRadius|1|Radius|0
 $--border-radius-circle: 100% !default;
 /// borderRadius|1|Radius|0
 $--border-radius-zero: 0 !default;
 
 // Box-shadow
+
+//qidian box shadow
+$--shadow-small: 0px 0px 1px 0px rgba(18,19,25,0.08),0px 0px 2px 0px rgba(18,19,25,0.08),0px 2px 4px 0px rgba(18,19,25,0.08) !default; /* 控件类-（滑块等） */
+$--shadow-medium: 0px 0px 1px 0px rgba(18,19,25,0.08),0px 0px 4px 0px rgba(18,19,25,0.08),0px 6px 12px 0px rgba(18,19,25,0.12) !default; /* 下拉弹层、卡片、轻弹层、气泡等 */
+$--shadow-large: 0px 16px 32px 0px rgba(18,19,25,0.16),0px 0px 8px 0px rgba(18,19,25,0.08),0px 0px 1px 0px rgba(18,19,25,0.08) !default; /* 对话框、通知、抽屉等 */
 /// boxShadow|1|Shadow|1
 $--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04) !default;
 // boxShadow|1|Shadow|1
@@ -99,6 +279,12 @@ $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 
 /* Fill
 -------------------------- */
+//qidian fill color
+$--color-fill-normal: var(--color-white); /* normal */
+$--color-fill-hover: var(--color-opacity-1); /* hover */
+$--color-fill-active: var(--color-brand-0); /* active */
+$--color-fill-disable: var(--color-opacity-0); /* disabled */
+
 $--fill-base: $--color-white !default;
 
 /* Typography
@@ -121,11 +307,13 @@ $--font-size-extra-small: 12px !default;
 $--font-weight-primary: 500 !default;
 /// fontWeight|1|Font Weight|1
 $--font-weight-secondary: 100 !default;
+//fontWeight base
+$--font-weight-base: 400 !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-primary: 24px !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px !default;
-$--font-color-disabled-base: #bbb !default;
+$--font-color-disabled-base: $--color-text-disable !default;
 /* Size
 -------------------------- */
 $--size-base: 14px !default;
@@ -138,13 +326,13 @@ $--index-popper: 2000 !default;
 
 /* Disable base
 -------------------------- */
-$--disabled-fill-base: $--background-color-base !default;
-$--disabled-color-base: $--color-text-placeholder !default;
-$--disabled-border-base: $--border-color-light !default;
+$--disabled-fill-base: $--color-fill-disable !default;
+$--disabled-color-base: $--color-text-disable !default;
+$--disabled-border-base: $--color-border-disable!default;
 
 /* Icon
 -------------------------- */
-$--icon-color: #666 !default;
+$--icon-color: $--color-text-caption !default;
 $--icon-color-base: $--color-info !default;
 
 /* Checkbox
@@ -152,21 +340,21 @@ $--icon-color-base: $--color-info !default;
 /// fontSize||Font|1
 $--checkbox-font-size: 14px !default;
 /// fontWeight||Font|1
-$--checkbox-font-weight: $--font-weight-primary !default;
+$--checkbox-font-weight: $--font-weight-base !default;
 /// color||Color|0
-$--checkbox-font-color: $--color-text-regular !default;
-$--checkbox-input-height: 14px !default;
-$--checkbox-input-width: 14px !default;
+$--checkbox-font-color: $--color-text-primary !default;
+$--checkbox-input-height: 16px !default;
+$--checkbox-input-width: 16px !default;
 /// borderRadius||Border|2
-$--checkbox-border-radius: $--border-radius-small !default;
+$--checkbox-border-radius: $--border-radius-base !default;
 /// color||Color|0
-$--checkbox-background-color: $--color-white !default;
-$--checkbox-input-border: $--border-base !default;
+$--checkbox-background-color: $--color-bg-1 !default;
+$--checkbox-input-border: $--color-border-normal !default;
 
 /// color||Color|0
-$--checkbox-disabled-border-color: $--border-color-base !default;
-$--checkbox-disabled-input-fill: #edf2fc !default;
-$--checkbox-disabled-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-border-color: $--color-border-disable !default;
+$--checkbox-disabled-input-fill: $--color-fill-disable !default;
+$--checkbox-disabled-icon-color: $--color-text-disable !default;
 
 $--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
 $--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
