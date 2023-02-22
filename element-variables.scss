@@ -155,16 +155,16 @@ $--white: #ffffff; /* 常量 */
 $--black: #000000; /* 常量 */
 
 //primary
-$--color-primary-normal: var(--color-brand-5); /* 主要颜色 */
-$--color-primary-hover: var(--color-brand-6); /* hover */
-$--color-primary-active: var(--color-brand-7); /* active */
-$--color-primary-focus: var(--color-brand-3); /* focus */
-$--color-primary-disable: var(--color-brand-2); /* disable */
-$--color-primary-light: var(--color-brand-0); /* light */
-$--color-primary-text: var(--color-brand-9); /* - */
-$--color-primary-light-normal: var(--color-brand-0); /* light */
-$--color-primary-light-hover: var(--color-brand-1); /* light-hover */
-$--color-primary-light-active: var(--color-brand-2); /* light-active */
+$--color-primary-normal: $--color-brand-5; /* 主要颜色 */
+$--color-primary-hover: $--color-brand-6; /* hover */
+$--color-primary-active: $--color-brand-7; /* active */
+$--color-primary-focus: $--color-brand-3; /* focus */
+$--color-primary-disable: $--color-brand-2; /* disable */
+$--color-primary-light: $--color-brand-0; /* light */
+$--color-primary-text: $--color-brand-9; /* - */
+$--color-primary-light-normal: $--color-brand-0; /* light */
+$--color-primary-light-hover: $--color-brand-1; /* light-hover */
+$--color-primary-light-active: $--color-brand-2; /* light-active */
 
 
 /// color|1|Brand Color|0
@@ -202,12 +202,12 @@ $--color-danger-lighter: $--color-red-0 !default;
 $--color-info-lighter: $--color-opacity-1 !default;
 
 //qidian text color
-$--color-text-primary: var(--color-opacity-13); /* - */
-$--color-text-secondary: var(--color-opacity-8); /* 次要 */
-$--color-text-caption: var(--color-opacity-6); /* 说明 */
-$--color-text-disable: var(--color-opacity-4); /* 不可用 */
-$--color-text-white: var(--white); /* 用于深色底的白色文字 */
-$--color-text-black: var(--black); /* 用于浅彩色底的黑色文字 */
+$--color-text-primary: $--color-opacity-13; /* - */
+$--color-text-secondary: $--color-opacity-8; /* 次要 */
+$--color-text-caption: $--color-opacity-6; /* 说明 */
+$--color-text-disable: $--color-opacity-4; /* 不可用 */
+$--color-text-white: $--white; /* 用于深色底的白色文字 */
+$--color-text-black: $--black; /* 用于浅彩色底的黑色文字 */
 
 /// color|1|Font Color|2
 $--color-text-primary: $--color-opacity-13 !default;
@@ -219,10 +219,10 @@ $--color-text-secondary: $--color-opacity-6 !default;
 $--color-text-placeholder: $--color-opacity-4 !default;
 
 //qidian border color
-$--color-border-normal: var(--color-opacity-3);
-$--color-border-hover: var(--color-opacity-4);
-$--color-border-active: var(--color-brand-1); /* active */
-$--color-border-disable: var(--color-opacity-2); /* 不可用 */
+$--color-border-normal: $--color-opacity-3;
+$--color-border-hover: $--color-opacity-4;
+$--color-border-active: $--color-brand-1; /* active */
+$--color-border-disable: $--color-opacity-2; /* 不可用 */
 
 /// color|1|Border Color|3
 $--border-color-base: #DCDFE6 !default;
@@ -236,10 +236,10 @@ $--border-color-extra-light: #F2F6FC !default;
 // Background
 /// color|1|Background Color|4
 /// qidian bg color
-$--color-bg-0: var(--color-white); /* 最底层背景色 */
-$--color-bg-1: var(--color-white); /* 强调背景色（弹框类，控件类） */
-$--color-bg-2: var(--color-white); /* 最上层背景色（气泡类、通知类） */
-$--color-bg-contrast: var(--color-gray-0); /* 对比背景色 */
+$--color-bg-0: $--color-white; /* 最底层背景色 */
+$--color-bg-1: $--color-white; /* 强调背景色（弹框类，控件类） */
+$--color-bg-2: $--color-white; /* 最上层背景色（气泡类、通知类） */
+$--color-bg-contrast: $--color-gray-0; /* 对比背景色 */
 $--color-overlay: rgba(18,19,25,0.32); /* 蒙层颜色 */
 
 $--background-color-base: $--color-bg-0 !default;
@@ -280,10 +280,10 @@ $--box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !default;
 /* Fill
 -------------------------- */
 //qidian fill color
-$--color-fill-normal: var(--color-white); /* normal */
-$--color-fill-hover: var(--color-opacity-1); /* hover */
-$--color-fill-active: var(--color-brand-0); /* active */
-$--color-fill-disable: var(--color-opacity-0); /* disabled */
+$--color-fill-normal: $--color-white; /* normal */
+$--color-fill-hover: $--color-opacity-1; /* hover */
+$--color-fill-active: $--color-brand-0; /* active */
+$--color-fill-disable: $--color-opacity-0; /* disabled */
 
 $--fill-base: $--color-white !default;
 
