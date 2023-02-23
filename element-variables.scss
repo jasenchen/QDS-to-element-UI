@@ -226,14 +226,14 @@ $--color-border-disable: $--color-opacity-2; /* 不可用 */
 
 $--color-divider-normal:$--color-opacity-2; /* 分割线颜色 */
 
-/// color|1|Border Color|3
-$--border-color-base: #DCDFE6 !default;
-/// color|1|Border Color|3
-$--border-color-light: #E4E7ED !default;
-/// color|1|Border Color|3
-$--border-color-lighter: #EBEEF5 !default;
-/// color|1|Border Color|3
-$--border-color-extra-light: #F2F6FC !default;
+/// default border
+$--border-color-base: $--color-opacity-3 !default;
+/// qidian divider
+$--border-color-light: $--color-opacity-2 !default;
+/// qidian divider 主要用在分隔线
+$--border-color-lighter: $--color-opacity-2 !default;
+/// color|1|Border Color|没看到哪里有用到
+$--border-color-extra-light: $--color-opacity-2 !default
 
 // Background
 /// color|1|Background Color|4
@@ -243,6 +243,8 @@ $--color-bg-1: $--color-white; /* 强调背景色（弹框类，控件类） */
 $--color-bg-2: $--color-white; /* 最上层背景色（气泡类、通知类） */
 $--color-bg-contrast: $--color-gray-0; /* 对比背景色 */
 $--color-overlay: rgba(18,19,25,0.32); /* 蒙层颜色 */
+
+$--table-head-bg: $--color-gray-1; /* 表头背景色 */
 
 $--background-color-base: $--color-bg-0 !default;
 
@@ -303,6 +305,22 @@ $--radius-normal: 3px; /* 控件、小卡片等 */
 $--radius-large: calc(($--radius-normal)*2); /* 大卡片、大弹框等 */
 $--radius-round: 9999px; /* 胶囊 */
 
+$--size-xxs: 8px;
+$--size-xxs-large: 12px; /* 12 */
+$--size-xs: 16px;
+$--size-s: 20px;
+$--size-m: 24px;
+$--size-l: 32px;
+$--size-xl: 48px;
+$--size-xxl: 64px;
+$--spacing-super-tight: 2px; /* 极相关组件相邻关系 */
+$--spacing-tight: 4px; /* 极紧凑组件相邻关系 */
+$--spacing-base: 8px; /* 默认间距基准单位 */
+$--spacing-base-loose: 12px; /* 紧凑宽松尺寸内/外边距 */
+$--spacing-loose: 16px; /* 默认宽松尺寸内/外边距 */
+$--spacing-quite-loose: 20px; /* 宽松尺寸内/外边距 */
+$--spacing-extra-loose: 24px; /* 较宽松尺寸内/外边距—容器级别 */
+$--spacing-super-loose: 32px; /* 默认内/外边距—页面级别 */
 //qidian font
 $--font-family-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,"PingFang SC","Microsoft YaHei","Noto Sans",sans-serif; /* 默认全局字体 */
 $--font-family-number-display: Inter Display,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,"PingFang SC","Microsoft YaHei","Noto Sans",sans-serif; /* 数字指标字体 */
@@ -640,67 +658,67 @@ $--notification-danger-icon-color: $--color-danger !default;
 
 /* Input
 -------------------------- */
-$--input-font-size: $--font-size-base !default;
+$--input-font-size: $--body-regular !default;
 /// color||Color|0
 $--input-font-color: $--color-text-regular !default;
 /// height||Other|4
-$--input-height: 40px !default;
-$--input-border: $--border-base !default;
-$--input-border-color: $--border-color-base !default;
+$--input-height: 32px !default;
+$--input-border: $--color-border-normal !default;
+$--input-border-color: $--color-border-normal !default;
 /// borderRadius||Border|2
-$--input-border-radius: $--border-radius-base !default;
-$--input-border-color-hover: $--border-color-hover !default;
+$--input-border-radius: $--radius-normal!default;
+$--input-border-color-hover: $--color-border-hover !default;
 /// color||Color|0
-$--input-background-color: $--color-white !default;
-$--input-fill-disabled: $--disabled-fill-base !default;
-$--input-color-disabled: $--font-color-disabled-base !default;
+$--input-background-color: $--color-fill-normal !default;
+$--input-fill-disabled: $--color-fill-disable !default;
+$--input-color-disabled: $--color-text-disable !default;
 /// color||Color|0
-$--input-icon-color: $--color-text-placeholder !default;
+$--input-icon-color: $--color-text-caption !default;
 /// color||Color|0
-$--input-placeholder-color: $--color-text-placeholder !default;
+$--input-placeholder-color: $--color-text-caption !default;
 $--input-max-width: 314px !default;
 
-$--input-hover-border: $--border-color-hover !default;
+$--input-hover-border: $--color-border-hover !default;
 $--input-clear-hover-color: $--color-text-secondary !default;
 
-$--input-focus-border: $--color-primary !default;
-$--input-focus-fill: $--color-white !default;
+$--input-focus-border: $--color-primary-normal !default;
+$--input-focus-fill: $--color-fill-normal !default;
 
-$--input-disabled-fill: $--disabled-fill-base !default;
-$--input-disabled-border: $--disabled-border-base !default;
-$--input-disabled-color: $--disabled-color-base !default;
-$--input-disabled-placeholder-color: $--color-text-placeholder !default;
+$--input-disabled-fill: $--color-fill-disable !default;
+$--input-disabled-border: $--color-border-disable !default;
+$--input-disabled-color: $--color-fill-disable !default;
+$--input-disabled-placeholder-color: $--color-fill-disable !default;
 
 /// fontSize||Font|1
 $--input-medium-font-size: 14px !default;
 /// height||Other|4
-$--input-medium-height: 36px !default;
+$--input-medium-height: 32px !default;
 /// fontSize||Font|1
-$--input-small-font-size: 13px !default;
+$--input-small-font-size: 14px !default;
 /// height||Other|4
 $--input-small-height: 32px !default;
 /// fontSize||Font|1
 $--input-mini-font-size: 12px !default;
 /// height||Other|4
-$--input-mini-height: 28px !default;
+$--input-mini-height: 32px !default;
 
 /* Cascader
 -------------------------- */
 /// color||Color|0
 $--cascader-menu-font-color: $--color-text-regular !default;
 /// color||Color|0
-$--cascader-menu-selected-font-color: $--color-primary !default;
+$--cascader-menu-selected-font-color: $--color-text-primary !default;
 $--cascader-menu-fill: $--fill-base !default;
-$--cascader-menu-font-size: $--font-size-base !default;
-$--cascader-menu-radius: $--border-radius-base !default;
-$--cascader-menu-border: solid 1px $--border-color-light !default;
-$--cascader-menu-shadow: $--box-shadow-light !default;
-$--cascader-node-background-hover: $--background-color-base !default;
-$--cascader-node-color-disabled:$--color-text-placeholder !default;
-$--cascader-color-empty:$--color-text-placeholder !default;
-$--cascader-tag-background: #f0f2f5;
+$--cascader-menu-font-size: $--body-regular!default;
+$--cascader-menu-radius: $--radius-normal !default;
+$--cascader-menu-border: solid 1px $--color-border-normal !default;
+$--cascader-menu-shadow: $--shadow-medium !default;
+$--cascader-node-background-hover: $--color-fill-hover !default;
+$--cascader-node-color-disabled:$--color-text-disable !default;
+$--cascader-color-empty:$--color-text !default;
+$--cascader-tag-background: #f0f2f5;//这个待确认
 
-/* Group
+/* Group 这个不确定是什么组件
 -------------------------- */
 $--group-option-flex: 0 0 (1/5) * 100% !default;
 $--group-option-offset-bottom: 12px !default;
@@ -711,18 +729,18 @@ $--group-title-width: 66px !default;
 
 /* Tab
 -------------------------- */
-$--tab-font-size: $--font-size-base !default;
-$--tab-border-line: 1px solid #e4e4e4 !default;
+$--tab-font-size: $--body-regular !default;
+$--tab-border-line: $--color-divider-normal !default;
 $--tab-header-color-active: $--color-text-secondary !default;
 $--tab-header-color-hover: $--color-text-regular !default;
 $--tab-header-color: $--color-text-regular !default;
 $--tab-header-fill-active: rgba($--color-black, 0.06) !default;
 $--tab-header-fill-hover: rgba($--color-black, 0.06) !default;
 $--tab-vertical-header-width: 90px !default;
-$--tab-vertical-header-count-color: $--color-white !default;
+$--tab-vertical-header-count-color: $--color-bg-0 !default;
 $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 
-/* Button
+/* Button 先跳过还没改
 -------------------------- */
 /// fontSize||Font|1
 $--button-font-size: $--font-size-base !default;
@@ -808,7 +826,7 @@ $--button-hover-tint-percent: 20% !default;
 $--button-active-shade-percent: 10% !default;
 
 
-/* cascader
+/* cascader 缺少很多定义样式
 -------------------------- */
 $--cascader-height: 200px !default;
 
@@ -817,12 +835,12 @@ $--cascader-height: 200px !default;
 /// color||Color|0
 $--switch-on-color: $--color-primary !default;
 /// color||Color|0
-$--switch-off-color: $--border-color-base !default;
+$--switch-off-color: $--color-gray-4 !default;
 /// fontSize||Font|1
-$--switch-font-size: $--font-size-base !default;
-$--switch-core-border-radius: 10px !default;
+$--switch-font-size: $--body-regular !default;
+$--switch-core-border-radius:$--radius-round !default;
 // height||Other|4 TODO: width 代码写死的40px 所以下面这三个属性都没意义
-$--switch-width: 40px !default;
+$--switch-width: 36px !default;
 // height||Other|4
 $--switch-height: 20px !default;
 // height||Other|4
@@ -830,76 +848,76 @@ $--switch-button-size: 16px !default;
 
 /* Dialog
 -------------------------- */
-$--dialog-background-color: $--color-white !default;
-$--dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !default;
+$--dialog-background-color: $--color-bg-1!default;
+$--dialog-box-shadow: $--shadow-large !default;
 /// fontSize||Font|1
-$--dialog-title-font-size: $--font-size-large !default;
+$--dialog-title-font-size: $--title-bold !default;
 /// fontSize||Font|1
-$--dialog-content-font-size: 14px !default;
+$--dialog-content-font-size: $--body-regular !default;
 /// fontLineHeight||LineHeight|2
 $--dialog-font-line-height: $--font-line-height-primary !default;
 /// padding||Spacing|3
-$--dialog-padding-primary: 20px !default;
+$--dialog-padding-primary: $--spacing-extra-loose !default;
 
 /* Table
 -------------------------- */
 /// color||Color|0
-$--table-border-color: $--border-color-lighter !default;
-$--table-border: 1px solid $--table-border-color !default;
+$--table-border-color: $--color-divider-normal!default;
+$--table-border: 1px solid $--color-border-normal !default;
 /// color||Color|0
-$--table-font-color: $--color-text-regular !default;
+$--table-font-color: $--color-text-primary !default;
 /// color||Color|0
-$--table-header-font-color: $--color-text-secondary !default;
+$--table-header-font-color: $--color-text-caption !default;
 /// color||Color|0
-$--table-row-hover-background-color: $--background-color-base !default;
-$--table-current-row-background-color: $--color-primary-light-9 !default;
+$--table-row-hover-background-color: $--color-fill-hover !default;
+$--table-current-row-background-color: $--color-fill-active!default;
 /// color||Color|0
-$--table-header-background-color: $--color-white !default;
-$--table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12) !default;
+$--table-header-background-color: $--table-head-bg !default;
+$--table-fixed-box-shadow: $--shadow-medium !default;
 
-/* Pagination
+/* Pagination hover及选中色无相应token 需修复
 -------------------------- */
 /// fontSize||Font|1
-$--pagination-font-size: 13px !default;
+$--pagination-font-size: $--body-regular !default;
 /// color||Color|0
-$--pagination-background-color: $--color-white !default;
+$--pagination-background-color: $--color-bg-0 !default;
 /// color||Color|0
 $--pagination-font-color: $--color-text-primary !default;
-$--pagination-border-radius: 3px !default;
+$--pagination-border-radius: $--radius-normal !default;
 /// color||Color|0
 $--pagination-button-color: $--color-text-primary !default;
 /// height||Other|4
 $--pagination-button-width: 35.5px !default;
 /// height||Other|4
-$--pagination-button-height: 28px !default;
+$--pagination-button-height: 24px !default;
 /// color||Color|0
-$--pagination-button-disabled-color: $--color-text-placeholder !default;
+$--pagination-button-disabled-color: $--color-text-disable !default;
 /// color||Color|0
-$--pagination-button-disabled-background-color: $--color-white !default;
+$--pagination-button-disabled-background-color: $--color-bg-0 !default;
 /// color||Color|0
-$--pagination-hover-color: $--color-primary !default;
+$--pagination-hover-color: $--color-text-primary !default;
 
-/* Popup
+/* Popup 这个是蒙层的意思吗？
 -------------------------- */
 /// color||Color|0
-$--popup-modal-background-color: $--color-black !default;
+$--popup-modal-background-color: $--color-overlay !default;
 /// opacity||Other|1
-$--popup-modal-opacity: 0.5 !default;
+$--popup-modal-opacity: 1 !default;
 
 /* Popover
 -------------------------- */
 /// color||Color|0
-$--popover-background-color: $--color-white !default;
+$--popover-background-color: $--color-bg-1 !default;
 /// fontSize||Font|1
-$--popover-font-size: $--font-size-base !default;
+$--popover-font-size: $--body-regular !default;
 /// color||Color|0
-$--popover-border-color: $--border-color-lighter !default;
+$--popover-border-color: $--color-border-normal !default;
 $--popover-arrow-size: 6px !default;
 /// padding||Spacing|3
-$--popover-padding: 12px !default;
-$--popover-padding-large: 18px 20px !default;
+$--popover-padding: 16px !default;
+$--popover-padding-large: 16px !default;
 /// fontSize||Font|1
-$--popover-title-font-size: 16px !default;
+$--popover-title-font-size: $--body-medium !default;
 /// color||Color|0
 $--popover-title-font-color: $--color-text-primary !default;
 
@@ -910,76 +928,76 @@ $--tooltip-fill: $--color-text-primary !default;
 /// color|1|Color|0
 $--tooltip-color: $--color-white !default;
 /// fontSize||Font|1
-$--tooltip-font-size: 12px !default;
+$--tooltip-font-size: $--caption-regular !default;
 /// color||Color|0
-$--tooltip-border-color: $--color-text-primary !default;
+$--tooltip-border-color: $--color-border-normal !default;
 $--tooltip-arrow-size: 6px !default;
 /// padding||Spacing|3
-$--tooltip-padding: 10px !default;
+$--tooltip-padding: $--spacing-base !default;
 
 /* Tag
 -------------------------- */
 /// color||Color|0
-$--tag-info-color: $--color-info !default;
+$--tag-info-color: $--color-text-caption !default;
 /// color||Color|0
 $--tag-primary-color: $--color-primary !default;
 /// color||Color|0
-$--tag-success-color: $--color-success !default;
+$--tag-success-color: $--color-success-normal !default;
 /// color||Color|0
-$--tag-warning-color: $--color-warning !default;
+$--tag-warning-color: $--color-warning-normal !default;
 /// color||Color|0
-$--tag-danger-color: $--color-danger !default;
+$--tag-danger-color: $--color-error-normal !default;
 /// fontSize||Font|1
-$--tag-font-size: 12px !default;
-$--tag-border-radius: 4px !default;
-$--tag-padding: 0 10px !default;
+$--tag-font-size: $--caption-regular !default;
+$--tag-border-radius:$--radius-normal !default;
+$--tag-padding: 4px 8px !default;
 
 /* Tree
 -------------------------- */
 /// color||Color|0
-$--tree-node-hover-background-color: $--background-color-base !default;
+$--tree-node-hover-background-color: $--color-fill-hover !default;
 /// color||Color|0
-$--tree-font-color: $--color-text-regular !default;
+$--tree-font-color: $--color-text-primary !default;
 /// color||Color|0
-$--tree-expand-icon-color: $--color-text-placeholder !default;
+$--tree-expand-icon-color: $--color-text-caption !default;
 
 /* Dropdown
 -------------------------- */
-$--dropdown-menu-box-shadow: $--box-shadow-light !default;
-$--dropdown-menuItem-hover-fill: $--color-primary-light-9 !default;
-$--dropdown-menuItem-hover-color: $--link-color !default;
+$--dropdown-menu-box-shadow: $--shadow-medium !default;
+$--dropdown-menuItem-hover-fill: $--color-fill-hover !default;
+$--dropdown-menuItem-hover-color: $--color-text-primary !default;
 
 /* Badge
 -------------------------- */
 /// color||Color|0
-$--badge-background-color: $--color-danger !default;
-$--badge-radius: 10px !default;
+$--badge-background-color: $--color-red-5 !default;
+$--badge-radius: $--radius-round !default;
 /// fontSize||Font|1
 $--badge-font-size: 12px !default;
 /// padding||Spacing|3
-$--badge-padding: 6px !default;
+$--badge-padding: 4px !default;
 /// height||Other|4
-$--badge-size: 18px !default;
+$--badge-size: 16px !default;
 
 /* Card
 --------------------------*/
 /// color||Color|0
-$--card-border-color: $--border-color-lighter !default;
-$--card-border-radius: 4px !default;
+$--card-border-color: $--color-border-normal !default;
+$--card-border-radius: $--radius-normal !default;
 /// padding||Spacing|3
-$--card-padding: 20px !default;
+$--card-padding: $--spacing-loose !default;
 
 /* Slider
 --------------------------*/
 /// color||Color|0
 $--slider-main-background-color: $--color-primary !default;
 /// color||Color|0
-$--slider-runway-background-color: $--border-color-light !default;
-$--slider-button-hover-color: mix($--color-primary, black, 97%) !default;
+$--slider-runway-background-color: $--color-opacity-1 !default;
+$--slider-button-hover-color:$--color-fill-hover!default;
 $--slider-stop-background-color: $--color-white !default;
-$--slider-disable-color: $--color-text-placeholder !default;
+$--slider-disable-color: $--color-text-disable !default;
 $--slider-margin: 16px 0 !default;
-$--slider-border-radius: 3px !default;
+$--slider-border-radius: $--radius-normal !default;
 /// height|1|Other|4
 $--slider-height: 6px !default;
 /// height||Other|4
@@ -989,19 +1007,19 @@ $--slider-button-wrapper-offset: -15px !default;
 
 /* Steps
 --------------------------*/
-$--steps-border-color: $--disabled-border-base !default;
-$--steps-border-radius: 4px !default;
-$--steps-padding: 20px !default;
+$--steps-border-color: $--color-divider-normal !default;
+$--steps-border-radius: 3px !default;
+$--steps-padding: 16px !default;
 
-/* Menu
+/* Menu 
 --------------------------*/
 /// fontSize||Font|1
-$--menu-item-font-size: $--font-size-base !default;
+$--menu-item-font-size: $--body-regular !default;
 /// color||Color|0
 $--menu-item-font-color: $--color-text-primary !default;
 /// color||Color|0
 $--menu-background-color: $--color-white !default;
-$--menu-item-hover-fill: $--color-primary-light-9 !default;
+$--menu-item-hover-fill: $--color-fill-hover !default;
 
 /* Rate
 --------------------------*/
