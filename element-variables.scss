@@ -356,9 +356,9 @@ $--checkbox-disabled-border-color: $--color-border-disable !default;
 $--checkbox-disabled-input-fill: $--color-fill-disable !default;
 $--checkbox-disabled-icon-color: $--color-text-disable !default;
 
-$--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
-$--checkbox-disabled-checked-input-border-color: $--border-color-base !default; 
-$--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--checkbox-disabled-checked-input-fill: $--color-primary-disable !default;
+$--checkbox-disabled-checked-input-border-color: $--color-border-disable !default;
+$--checkbox-disabled-checked-icon-color: $--color-fill-disable !default;
 
 /// color||Color|0
 $--checkbox-checked-font-color: $--color-primary !default;
