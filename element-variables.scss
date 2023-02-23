@@ -224,6 +224,8 @@ $--color-border-hover: $--color-opacity-4;
 $--color-border-active: $--color-brand-1; /* active */
 $--color-border-disable: $--color-opacity-2; /* 不可用 */
 
+$--color-divider-normal:$--color-opacity-2; /* 分割线颜色 */
+
 /// color|1|Border Color|3
 $--border-color-base: #DCDFE6 !default;
 /// color|1|Border Color|3
@@ -286,6 +288,34 @@ $--color-fill-active: $--color-brand-0; /* active */
 $--color-fill-disable: $--color-opacity-0; /* disabled */
 
 $--fill-base: $--color-white !default;
+
+// spacing and size
+$--spacing-super-tight: 2px; /* 极相关组件相邻关系 */
+$--spacing-tight: 4px; /* 极紧凑组件相邻关系 */
+$--spacing-base: 8px; /* 默认间距基准单位 */
+$--spacing-base-loose: 12px; /* 紧凑宽松尺寸内/外边距 */
+$--spacing-loose: 16px; /* 默认宽松尺寸内/外边距 */
+$--spacing-quite-loose: 20px; /* 宽松尺寸内/外边距 */
+$--spacing-extra-loose: 24px; /* 较宽松尺寸内/外边距—容器级别 */
+$--spacing-super-loose: 32px; /* 默认内/外边距—页面级别 */
+$--radius-small: calc(($--radius-normal)/2);
+$--radius-normal: 3px; /* 控件、小卡片等 */
+$--radius-large: calc(($--radius-normal)*2); /* 大卡片、大弹框等 */
+$--radius-round: 9999px; /* 胶囊 */
+
+//qidian font
+$--font-family-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,"PingFang SC","Microsoft YaHei","Noto Sans",sans-serif; /* 默认全局字体 */
+$--font-family-number-display: Inter Display,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,"PingFang SC","Microsoft YaHei","Noto Sans",sans-serif; /* 数字指标字体 */
+$--display-bold: 600 32px/40px ($--font-family-normal); /* 超大标题 */
+$--headline-bold: 600 24px/32px ($--font-family-normal); /* 大标题 */
+$--title-regular: 400 20px/28px ($--font-family-normal); /* 标题文字 */
+$--title-bold: 600 20px/28px ($--font-family-normal); /* 标题 */
+$--subtitle-regular: 400 16px/24px ($--font-family-normal); /* 小标题 */
+$--subtitle-medium: 500 16px/24px ($--font-family-normal); /* 小标题 */
+$--body-regular: 400 14px/20px ($--font-family-normal); /* 正文的默认字号 */
+$--body-medium: 500 14px/20px ($--font-family-normal); /* 正文 */
+$--caption-regular: 400 12px/16px ($--font-family-normal); /* 说明文本 */
+$--caption-medium: 500 12px/16px ($--font-family-normal); /* 说明文本 */
 
 /* Typography
 -------------------------- */
@@ -975,117 +1005,117 @@ $--menu-item-hover-fill: $--color-primary-light-9 !default;
 
 /* Rate
 --------------------------*/
-$--rate-height: 20px !default;
+$--rate-height: 24px !default;
 /// fontSize||Font|1
 $--rate-font-size: $--font-size-base !default;
 /// height||Other|3
-$--rate-icon-size: 18px !default;
+$--rate-icon-size: $--size-m !default;
 /// margin||Spacing|2
-$--rate-icon-margin: 6px !default;
-$--rate-icon-color: $--color-text-placeholder !default;
+$--rate-icon-margin: $--spacing-loose  !default;
+$--rate-icon-color: $--color-text-caption !default;
 
 /* DatePicker
 --------------------------*/
-$--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-font-color: $--color-text-primary !default;
 /// color|1|Color|0
-$--datepicker-off-font-color: $--color-text-placeholder !default;
+$--datepicker-off-font-color: $--color-text-disable !default;
 /// color||Color|0
-$--datepicker-header-font-color: $--color-text-regular !default;
+$--datepicker-header-font-color: $--color-text-primary !default;
 $--datepicker-icon-color: $--color-text-primary !default;
-$--datepicker-border-color: $--disabled-border-base !default;
-$--datepicker-inner-border-color: #e4e4e4 !default;
+$--datepicker-border-color: $--color-norder-normal !default;
+$--datepicker-inner-border-color:$--color-divider-normal !default;
 /// color||Color|0
-$--datepicker-inrange-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-background-color: $--color-primary-light-normal !default;
 /// color||Color|0
-$--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
+$--datepicker-inrange-hover-background-color: $--color-primary-light-hover !default;
 /// color||Color|0
-$--datepicker-active-color: $--color-primary !default;
+$--datepicker-active-color: $--color-primary-normal !default;
 /// color||Color|0
-$--datepicker-hover-font-color: $--color-primary !default;
-$--datepicker-cell-hover-color: #fff !default;
+$--datepicker-hover-font-color: $--color-text-primary !default;
+$--datepicker-cell-hover-color: $--color-fill-hover!default;
 
 /* Loading
 --------------------------*/
 /// height||Other|4
-$--loading-spinner-size: 42px !default;
+$--loading-spinner-size: 30px !default;
 /// height||Other|4
-$--loading-fullscreen-spinner-size: 50px !default;
+$--loading-fullscreen-spinner-size: 48px !default;
 
 /* Scrollbar
 --------------------------*/
-$--scrollbar-background-color: rgba($--color-text-secondary, .3) !default;
-$--scrollbar-hover-background-color: rgba($--color-text-secondary, .5) !default;
+$--scrollbar-background-color: $--color-opacity-3 !default;
+$--scrollbar-hover-background-color: $--color-opacity-4 !default;
 
 /* Carousel
 --------------------------*/
 /// fontSize||Font|1
-$--carousel-arrow-font-size: 12px !default;
-$--carousel-arrow-size: 36px !default;
-$--carousel-arrow-background: rgba(31, 45, 61, 0.11) !default;
-$--carousel-arrow-hover-background: rgba(31, 45, 61, 0.23) !default;
+$--carousel-arrow-font-size: 16px !default;
+$--carousel-arrow-size: 48px !default;
+$--carousel-arrow-background: $--color-opacity-6 !default;
+$--carousel-arrow-hover-background: $--color-opacity-8 !default;
 /// width||Other|4
-$--carousel-indicator-width: 30px !default;
+$--carousel-indicator-width: 32px !default;
 /// height||Other|4
 $--carousel-indicator-height: 2px !default;
 $--carousel-indicator-padding-horizontal: 4px !default;
 $--carousel-indicator-padding-vertical: 12px !default;
-$--carousel-indicator-out-color: $--border-color-hover !default;
+$--carousel-indicator-out-color: $--color-border-hover !default;
 
 /* Collapse
 --------------------------*/
 /// color||Color|0
-$--collapse-border-color: $--border-color-lighter !default;
+$--collapse-border-color: $--color-border-normal !default;
 /// height||Other|4
-$--collapse-header-height: 48px !default;
+$--collapse-header-height: 44px !default;
 /// color||Color|0
-$--collapse-header-background-color: $--color-white !default;
+$--collapse-header-background-color: $--color-bg-0 !default;
 /// color||Color|0
 $--collapse-header-font-color: $--color-text-primary !default;
 /// fontSize||Font|1
-$--collapse-header-font-size: 13px !default;
+$--collapse-header-font-size: $--body-regular !default;
 /// color||Color|0
-$--collapse-content-background-color: $--color-white !default;
+$--collapse-content-background-color: $--color-bg-0 !default;
 /// fontSize||Font|1
-$--collapse-content-font-size: 13px !default;
+$--collapse-content-font-size: $--body-regular !default;
 /// color||Color|0
 $--collapse-content-font-color: $--color-text-primary !default;
 
-/* Transfer
+/* Transfer qidian 几乎没有
 --------------------------*/
-$--transfer-border-color: $--border-color-lighter !default;
-$--transfer-border-radius: $--border-radius-base !default;
+$--transfer-border-color: $--color-border-normal !default;
+$--transfer-border-radius: $--radius-normal !default;
 /// height||Other|4
 $--transfer-panel-width: 200px !default;
 /// height||Other|4
 $--transfer-panel-header-height: 40px !default;
 /// color||Color|0
-$--transfer-panel-header-background-color: $--background-color-base !default;
+$--transfer-panel-header-background-color: $--color-bg-0 !default;
 /// height||Other|4
 $--transfer-panel-footer-height: 40px !default;
 /// height||Other|4
 $--transfer-panel-body-height: 246px !default;
 /// height||Other|4
-$--transfer-item-height: 30px !default;
+$--transfer-item-height: 28px !default;
 /// height||Other|4
 $--transfer-filter-height: 32px !default;
 
 /* Header
   --------------------------*/
-$--header-padding: 0 20px !default;
+$--header-padding: 0 32px !default;
 
 /* Footer
 --------------------------*/
-$--footer-padding: 0 20px !default;
+$--footer-padding: 0 32px !default;
 
 /* Main
 --------------------------*/
-$--main-padding: 20px !default;
+$--main-padding: $--spacing-ertra-loose !default;
 
 /* Timeline
 --------------------------*/
-$--timeline-node-size-normal: 12px !default;
-$--timeline-node-size-large: 14px !default;
-$--timeline-node-color: $--border-color-light !default;
+$--timeline-node-size-normal: 16px !default;
+$--timeline-node-size-large: 20 px !default;
+$--timeline-node-color: $--color-divider-normal !default;
 
 /* Backtop
 --------------------------*/
@@ -1094,30 +1124,30 @@ $--backtop-background-color: $--color-white !default;
 /// color||Color|0
 $--backtop-font-color: $--color-primary !default;
 /// color||Color|0
-$--backtop-hover-background-color: $--border-color-extra-light !default;
+$--backtop-hover-background-color: $--color-fill-hover !default;
 
-/* Link
+/* Link replace with qidian style
 --------------------------*/
 /// fontSize||Font|1
-$--link-font-size: $--font-size-base !default;
+$--link-font-size: $--body-regular !default;
 /// fontWeight||Font|1
 $--link-font-weight: $--font-weight-primary !default;
 /// color||Color|0
-$--link-default-font-color: $--color-text-regular !default;
+$--link-default-font-color: $--color-text-primary !default;
 /// color||Color|0
 $--link-default-active-color: $--color-primary !default;
 /// color||Color|0
-$--link-disabled-font-color: $--color-text-placeholder !default;
+$--link-disabled-font-color: $--color-text-disable !default;
 /// color||Color|0
 $--link-primary-font-color: $--color-primary !default;
 /// color||Color|0
-$--link-success-font-color: $--color-success !default;
+$--link-success-font-color: $--color-success-normal !default;
 /// color||Color|0
-$--link-warning-font-color: $--color-warning !default;
+$--link-warning-font-color: $--color-warning-normal !default;
 /// color||Color|0
-$--link-danger-font-color: $--color-danger !default;
+$--link-danger-font-color: $--color-danger-normal !default;
 /// color||Color|0
-$--link-info-font-color: $--color-info !default;
+$--link-info-font-color: $--color-text-caption !default;
 /* Calendar
 --------------------------*/
 /// border||Other|4
