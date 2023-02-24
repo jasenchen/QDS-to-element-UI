@@ -247,6 +247,56 @@ $--color-overlay: rgba(18,19,25,0.32); /* 蒙层颜色 */
 $--table-head-bg: $--color-gray-1; /* 表头背景色 */
 
 $--background-color-base: $--color-bg-0 !default;
+//function clolor
+
+$--color-bg-header: rgba(18,19,25,0.00); /* 头部背景色 */
+$--color-bg-footer: 12131900; /* 底部背景色 */
+$--color-nav-1: $--color-gray-1; /* 一级导航颜色 */
+$--color-nav-2: $--color-gray-0; /* 二级导航颜色 */
+$--color-link-normal: $--color-brand-5; /* normal */
+$--color-link-hover: $--color-brand-6; /* hover */
+$--color-link-active: $--color-brand-7; /* active */
+$--color-link-visited: $--color-brand-4; /* visited */
+$--color-prompt-normal: $--color-blue-5; /* normal */
+$--color-prompt-hover: $--color-blue-6; /* hover */
+$--color-prompt-active: $--color-blue-7; /* active */
+$--color-prompt-disable: $--color-blue-2; /* disable */
+$--color-prompt-light-normal: $--color-blue-0; /* light-normal */
+$--color-prompt-light-hover: $--color-blue-1; /* light-hover */
+$--color-prompt-light-active: $--color-blue-2; /* light-active */
+$--color-prompt-text: $--color-blue-9; /* 提示文本 */
+$--color-success-normal: $--color-green-5; /* normal */
+$--color-success-hover: $--color-green-6; /* hover */
+$--color-success-active: $--color-green-7; /* active */
+$--color-success-disable: $--color-green-2; /* disable */
+$--color-success-light-normal: $--color-green-0; /* light-normal */
+$--color-success-light-hover: $--color-green-1; /* light-hover */
+$--color-success-light-active: $--color-green-2; /* light-active */
+$--color-success-text: $--color-green-9; /* 提示文本 */
+$--color-warning-normal: $--color-orange-5; /* normal */
+$--color-warning-hover: $--color-orange-6; /* hover */
+$--color-warning-active: $--color-orange-7; /* active */
+$--color-warning-disable: $--color-orange-2; /* disable */
+$--color-warning-light-normal: $--color-orange-0; /* light-normal */
+$--color-warning-light-hover: $--color-orange-1; /* light-hover */
+$--color-warning-light-active: $--color-orange-2; /* light-active */
+$--color-warning-text: $--color-orange-9; /* 提示文本 */
+$--color-error-normal: $--color-red-5; /* normal */
+$--color-error-hover: $--color-red-6; /* hover */
+$--color-error-active: $--color-red-7; /* active */
+$--color-error-disable: $--color-red-2; /* disable */
+$--color-error-text: $--color-red-9; /* 提示文本 */
+$--color-error-light-normal: $--color-red-0; /* light-normal */
+$--color-error-light-hover: $--color-red-1; /* light-hover */
+$--color-error-light-active: $--color-red-2; /* light-active */
+
+
+
+
+
+
+
+
 
 /* Link
 -------------------------- */
