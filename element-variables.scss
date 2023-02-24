@@ -17,7 +17,7 @@ $--color-transition-base: color .2s cubic-bezier(0.36, 0.01, 0.1, 1) !default;
 -------------------------- */
 
 // qidian global color
-// --------------------------
+
 
 // brand
 $--color-brand-0: #F1F6FF; /* - */
@@ -235,9 +235,9 @@ $--border-color-lighter: $--color-opacity-2 !default;
 /// color|1|Border Color|没看到哪里有用到
 $--border-color-extra-light: $--color-opacity-2 !default
 
-// Background
-/// color|1|Background Color|4
+
 /// qidian bg color
+
 $--color-bg-0: $--color-white; /* 最底层背景色 */
 $--color-bg-1: $--color-white; /* 强调背景色（弹框类，控件类） */
 $--color-bg-2: $--color-white; /* 最上层背景色（气泡类、通知类） */
@@ -247,6 +247,50 @@ $--color-overlay: rgba(18,19,25,0.32); /* 蒙层颜色 */
 $--table-head-bg: $--color-gray-1; /* 表头背景色 */
 
 $--background-color-base: $--color-bg-0 !default;
+//function clolor
+
+$--color-bg-header: rgba(18,19,25,0.00); /* 头部背景色 */
+$--color-bg-footer: 12131900; /* 底部背景色 */
+$--color-nav-1: $--color-gray-1; /* 一级导航颜色 */
+$--color-nav-2: $--color-gray-0; /* 二级导航颜色 */
+$--color-link-normal: $--color-brand-5; /* normal */
+$--color-link-hover: $--color-brand-6; /* hover */
+$--color-link-active: $--color-brand-7; /* active */
+$--color-link-visited: $--color-brand-4; /* visited */
+$--color-prompt-normal: $--color-blue-5; /* normal */
+$--color-prompt-hover: $--color-blue-6; /* hover */
+$--color-prompt-active: $--color-blue-7; /* active */
+$--color-prompt-disable: $--color-blue-2; /* disable */
+$--color-prompt-light-normal: $--color-blue-0; /* light-normal */
+$--color-prompt-light-hover: $--color-blue-1; /* light-hover */
+$--color-prompt-light-active: $--color-blue-2; /* light-active */
+$--color-prompt-text: $--color-blue-9; /* 提示文本 */
+$--color-success-normal: $--color-green-5; /* normal */
+$--color-success-hover: $--color-green-6; /* hover */
+$--color-success-active: $--color-green-7; /* active */
+$--color-success-disable: $--color-green-2; /* disable */
+$--color-success-light-normal: $--color-green-0; /* light-normal */
+$--color-success-light-hover: $--color-green-1; /* light-hover */
+$--color-success-light-active: $--color-green-2; /* light-active */
+$--color-success-text: $--color-green-9; /* 提示文本 */
+$--color-warning-normal: $--color-orange-5; /* normal */
+$--color-warning-hover: $--color-orange-6; /* hover */
+$--color-warning-active: $--color-orange-7; /* active */
+$--color-warning-disable: $--color-orange-2; /* disable */
+$--color-warning-light-normal: $--color-orange-0; /* light-normal */
+$--color-warning-light-hover: $--color-orange-1; /* light-hover */
+$--color-warning-light-active: $--color-orange-2; /* light-active */
+$--color-warning-text: $--color-orange-9; /* 提示文本 */
+$--color-error-normal: $--color-red-5; /* normal */
+$--color-error-hover: $--color-red-6; /* hover */
+$--color-error-active: $--color-red-7; /* active */
+$--color-error-disable: $--color-red-2; /* disable */
+$--color-error-text: $--color-red-9; /* 提示文本 */
+$--color-error-light-normal: $--color-red-0; /* light-normal */
+$--color-error-light-hover: $--color-red-1; /* light-hover */
+$--color-error-light-active: $--color-red-2; /* light-active */
+
+
 
 /* Link
 -------------------------- */
@@ -340,28 +384,26 @@ $--caption-medium: 500 12px/16px ($--font-family-normal); /* 说明文本 */
 $--font-path: 'fonts' !default;
 $--font-display: 'auto' !default;
 /// fontSize|1|Font Size|0
-$--font-size-extra-large: 20px !default;
+$--font-size-extra-large: $--headline-bold !default;
 /// fontSize|1|Font Size|0
-$--font-size-large: 18px !default;
+$--font-size-large: $--title-bold !default;
 /// fontSize|1|Font Size|0
-$--font-size-medium: 16px !default;
+$--font-size-medium: $--subtitle-medium!default;
 /// fontSize|1|Font Size|0
-$--font-size-base: 14px !default;
+$--font-size-base: $--body-regular !default;
 /// fontSize|1|Font Size|0
-$--font-size-small: 13px !default;
+$--font-size-small: $--body-regular !default;
 /// fontSize|1|Font Size|0
-$--font-size-extra-small: 12px !default;
+$--font-size-extra-small: $--caption-regular !default;
 /// fontWeight|1|Font Weight|1
 $--font-weight-primary: 500 !default;
 /// fontWeight|1|Font Weight|1
 $--font-weight-secondary: 100 !default;
-//fontWeight base
-$--font-weight-base: 400 !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-primary: 24px !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px !default;
-$--font-color-disabled-base: $--color-text-disable !default;
+$--font-color-disabled-base: $--color-opacity-4 !default;
 /* Size
 -------------------------- */
 $--size-base: 14px !default;
@@ -452,7 +494,7 @@ $--checkbox-button-checked-border-color: $--color-primary !default;
 /* Radio
 -------------------------- */
 /// fontSize||Font|1
-$--radio-font-size: $--font-size-base !default;
+$--radio-font-size: $--body-regular !default;
 /// fontWeight||Font|1
 $--radio-font-weight: $--font-weight-primary !default;
 /// color||Color|0
@@ -460,34 +502,34 @@ $--radio-font-color: $--color-text-regular !default;
 $--radio-input-height: 14px !default;
 $--radio-input-width: 14px !default;
 /// borderRadius||Border|2
-$--radio-input-border-radius: $--border-radius-circle !default;
+$--radio-input-border-radius: $--radius-round !default;
 /// color||Color|0
-$--radio-input-background-color: $--color-white !default;
-$--radio-input-border: $--border-base !default;
+$--radio-input-background-color: $--color-bg-1 !default;
+$--radio-input-border: $--color-border-normal !default;
 /// color||Color|0
-$--radio-input-border-color: $--border-color-base !default;
+$--radio-input-border-color: $--color-border-normal!default;
 /// color||Color|0
-$--radio-icon-color: $--color-white !default;
+$--radio-icon-color: $--color-white !default;//不知道是啥
 
-$--radio-disabled-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-icon-color: $--disabled-fill-base !default;
+$--radio-disabled-input-border-color: $--color-border-disable !default;
+$--radio-disabled-input-fill: $--color-fill-disable !default;
+$--radio-disabled-icon-color: $--color-fill-disable !default;
 
-$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
-$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
-$--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
+$--radio-disabled-checked-input-border-color: $--color-primary-disable !default;
+$--radio-disabled-checked-input-fill: $--color-bg-1 !default;
+$--radio-disabled-checked-icon-color: $--color-text-disable !default;
 
 /// color||Color|0
 $--radio-checked-font-color: $--color-primary !default;
 /// color||Color|0
 $--radio-checked-input-border-color: $--color-primary !default;
 /// color||Color|0
-$--radio-checked-input-background-color: $--color-white !default;
+$--radio-checked-input-background-color: $--color-bg-1 !default;
 /// color||Color|0
 $--radio-checked-icon-color: $--color-primary !default;
 
-$--radio-input-border-color-hover: $--color-primary !default;
-
+$--radio-input-border-color-hover: $--color-primary-hover !default;
+/// 这个是带有边框的checkbox，企点没有这种类型可以忽略
 $--radio-bordered-height: 40px !default;
 $--radio-bordered-padding: 12px 20px 0 10px !default;
 $--radio-bordered-medium-padding: 10px 20px 0 10px !default;
@@ -504,14 +546,14 @@ $--radio-bordered-mini-input-width: 12px !default;
 $--radio-bordered-mini-height: 28px !default;
 
 /// fontSize||Font|1
-$--radio-button-font-size: $--font-size-base !default;
+$--radio-button-font-size: $--body-regular !default;
 /// color||Color|0
 $--radio-button-checked-background-color: $--color-primary !default;
 /// color||Color|0
 $--radio-button-checked-font-color: $--color-white !default;
 /// color||Color|0
 $--radio-button-checked-border-color: $--color-primary !default;
-$--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
+$--radio-button-disabled-checked-fill: $--color-primary-disable !default;
 
 /* Select
 -------------------------- */
