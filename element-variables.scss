@@ -400,6 +400,7 @@ $--font-weight-primary: 500 !default;
 /// fontWeight|1|Font Weight|1
 $--font-weight-secondary: 100 !default;
 /// fontLineHeight|1|Line Height|2
+$--font-weight-base: 400;
 $--font-line-height-primary: 24px !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px !default;
@@ -639,7 +640,7 @@ $--messagebox-info-color: $--color-info !default;
 /// color||Color|0
 $--messagebox-warning-color: $--color-warning !default;
 /// color||Color|0
-$--messagebox-danger-color: $--color-danger !default;
+$--messagebox-danger-color: $--color-error-normal !default;
 
 /* Message
 -------------------------- */
@@ -661,7 +662,7 @@ $--message-info-font-color: $--color-info !default;
 /// color||Color|0
 $--message-warning-font-color: $--color-warning !default;
 /// color||Color|0
-$--message-danger-font-color: $--color-danger !default;
+$--message-danger-font-color: $--color-error-normal !default;
 
 /* Notification qidian 暂无此组件
 -------------------------- */
@@ -693,7 +694,7 @@ $--notification-close-hover-color: $--color-text-regular !default;
 /// color||Color|0
 $--notification-success-icon-color: $--color-success-normal !default;
 /// color||Color|0
-$--notification-info-icon-color: $--color-caption !default;
+$--notification-info-icon-color: $--color-text-caption !default;
 /// color||Color|0
 $--notification-warning-icon-color: $--color-warning-normal !default;
 /// color||Color|0
@@ -758,7 +759,7 @@ $--cascader-menu-border: solid 1px $--color-border-normal !default;
 $--cascader-menu-shadow: $--shadow-medium !default;
 $--cascader-node-background-hover: $--color-fill-hover !default;
 $--cascader-node-color-disabled:$--color-text-disable !default;
-$--cascader-color-empty:$--color-text !default;
+$--cascader-color-empty:$--color-text-caption !default;
 $--cascader-tag-background: #f0f2f5;//这个待确认
 
 /* Group 这个不确定是什么组件
@@ -857,11 +858,11 @@ $--button-warning-font-color: $--white !default;
 /// color||Color|0
 $--button-warning-background-color: $--color-warning !default;
 /// color||Color|0
-$--button-danger-border-color: $--color-danger !default;
+$--button-danger-border-color: $--color-error-normal !default;
 /// color||Color|0
 $--button-danger-font-color: $--white !default;
 /// color||Color|0
-$--button-danger-background-color: $--color-danger !default;
+$--button-danger-background-color: $--color-error-normal !default;
 /// color||Color|0
 $--button-info-border-color: $--color-info !default;
 /// color||Color|0
@@ -1087,7 +1088,7 @@ $--datepicker-off-font-color: $--color-text-disable !default;
 /// color||Color|0
 $--datepicker-header-font-color: $--color-text-primary !default;
 $--datepicker-icon-color: $--color-text-primary !default;
-$--datepicker-border-color: $--color-norder-normal !default;
+$--datepicker-border-color: $--color-border-normal !default;
 $--datepicker-inner-border-color:$--color-divider-normal !default;
 /// color||Color|0
 $--datepicker-inrange-background-color: $--color-primary-light-normal !default;
@@ -1174,7 +1175,7 @@ $--footer-padding: 0 32px !default;
 
 /* Main
 --------------------------*/
-$--main-padding: $--spacing-ertra-loose !default;
+$--main-padding: $--spacing-extra-loose !default;
 
 /* Timeline
 --------------------------*/
@@ -1210,7 +1211,7 @@ $--link-success-font-color: $--color-success-normal !default;
 /// color||Color|0
 $--link-warning-font-color: $--color-warning-normal !default;
 /// color||Color|0
-$--link-danger-font-color: $--color-danger-normal !default;
+$--link-danger-font-color: $--color-error-normal !default;
 /// color||Color|0
 $--link-info-font-color: $--color-text-caption !default;
 /* Calendar
@@ -1279,7 +1280,7 @@ $--result-extra-margin-top: 30px !default;
 $--result-info-color: $--color-text-caption !default;
 $--result-success-color: $--color-success-normal !default;
 $--result-warning-color: $--color-warning-normal !default;
-$--result-danger-color: $--color-danger-normal !default;
+$--result-danger-color: $--color-error-normal !default;
 
 /* Break-point
 --------------------------*/
