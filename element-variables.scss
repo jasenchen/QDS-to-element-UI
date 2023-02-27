@@ -366,29 +366,43 @@ $--spacing-quite-loose: 20px; /* 宽松尺寸内/外边距 */
 $--spacing-extra-loose: 24px; /* 较宽松尺寸内/外边距—容器级别 */
 $--spacing-super-loose: 32px; /* 默认内/外边距—页面级别 */
 //qidian font
-$--font-family-normal: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,"PingFang SC","Microsoft YaHei","Noto Sans",sans-serif; /* 默认全局字体 */
-$--font-family-number-display: Inter Display,-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,"PingFang SC","Microsoft YaHei","Noto Sans",sans-serif; /* 数字指标字体 */
-$--display-bold: 600 32px/40px ($--font-family-normal); /* 超大标题 */
-$--headline-bold: 600 24px/32px ($--font-family-normal); /* 大标题 */
-$--title-regular: 400 20px/28px ($--font-family-normal); /* 标题文字 */
-$--title-bold: 600 20px/28px ($--font-family-normal); /* 标题 */
-$--subtitle-regular: 400 16px/24px ($--font-family-normal); /* 小标题 */
-$--subtitle-medium: 500 16px/24px ($--font-family-normal); /* 小标题 */
-$--body-regular: 400 14px/20px ($--font-family-normal); /* 正文的默认字号 */
-$--body-medium: 500 14px/20px ($--font-family-normal); /* 正文 */
-$--caption-regular: 400 12px/16px ($--font-family-normal); /* 说明文本 */
-$--caption-medium: 500 12px/16px ($--font-family-normal); /* 说明文本 */
+$--display-regular:  32px; /* 超大标题 */
+$--display-line-height: 40px;
+
+$--headline-regular:  24px; /* 大标题 */
+$--headline-height: 32px;
+
+$--title-regular:  20px; /* 标题文字 */
+// $--title-bold:  20px; /* 标题 */
+$--title-line-height: 28px;
+
+$--subtitle-regular:  16px; /* 小标题 */
+// $--subtitle-medium:  16px; /* 小标题 */
+$--subtitle-line-height: 24px;
+
+$--body-regular: 14px; /* 正文的默认字号 */
+// $--body-medium:  14px; /* 正文 */
+$--body-line-height: 20px;
+
+$--caption-regular:  12px; /* 说明文本 */
+// $--caption-medium:  12px; /* 说明文本 */
+$--caption-line-height: 16px;
+
+//字重
+$--font-weight-regular: 400;
+$--font-weight-medium: 500;
+$--font-weight-bold:600;
 
 /* Typography
 -------------------------- */
 $--font-path: 'fonts' !default;
 $--font-display: 'auto' !default;
 /// fontSize|1|Font Size|0
-$--font-size-extra-large: $--headline-bold !default;
+$--font-size-extra-large: $--headline-regular !default;
 /// fontSize|1|Font Size|0
-$--font-size-large: $--title-bold !default;
+$--font-size-large: $--title-regular !default;
 /// fontSize|1|Font Size|0
-$--font-size-medium: $--subtitle-medium!default;
+$--font-size-medium: $--subtitle-regular!default;
 /// fontSize|1|Font Size|0
 $--font-size-base: $--body-regular !default;
 /// fontSize|1|Font Size|0
@@ -401,7 +415,7 @@ $--font-weight-primary: 500 !default;
 $--font-weight-secondary: 100 !default;
 /// fontLineHeight|1|Line Height|2
 $--font-weight-base: 400;
-$--font-line-height-primary: 24px !default;
+$--font-line-height-primary: $--body-line-height !default;
 /// fontLineHeight|1|Line Height|2
 $--font-line-height-secondary: 16px !default;
 $--font-color-disabled-base: $--color-opacity-4 !default;
@@ -431,7 +445,7 @@ $--icon-color-base: $--color-info !default;
 /// fontSize||Font|1
 $--checkbox-font-size: $--body-regular !default;
 /// fontWeight||Font|1
-$--checkbox-font-weight: $--font-weight-primary !default;
+$--checkbox-font-weight: $--font-weight-regular !default;
 /// color||Color|0
 $--checkbox-font-color: $--color-text-regular !default;
 $--checkbox-input-height: 14px !default;
@@ -497,7 +511,7 @@ $--checkbox-button-checked-border-color: $--color-primary !default;
 /// fontSize||Font|1
 $--radio-font-size: $--body-regular !default;
 /// fontWeight||Font|1
-$--radio-font-weight: $--font-weight-primary !default;
+$--radio-font-weight: $--font-weight-regular !default;
 /// color||Color|0
 $--radio-font-color: $--color-text-regular !default;
 $--radio-input-height: 14px !default;
@@ -625,13 +639,13 @@ $--messagebox-title-color: $--color-text-primary !default;
 $--msgbox-width: 420px !default;
 $--msgbox-border-radius: $--radius-normal !default;
 /// fontSize||Font|1
-$--messagebox-font-size: $--body-medium !default;
+$--messagebox-font-size: $--body-regular !default;
 /// fontSize||Font|1
 $--messagebox-content-font-size: $--body-regular !default;
 /// color||Color|0
 $--messagebox-content-color: $--color-text-regular !default;
 /// fontSize||Font|1
-$--messagebox-error-font-size: 12px !default;
+$--messagebox-error-font-size: $--caption-regular !default;
 $--msgbox-padding-primary: 16px !default;
 /// color||Color|0
 $--messagebox-success-color: $--color-success !default;
@@ -682,7 +696,7 @@ $--notification-content-font-size: $--body-regular !default;
 /// color||Color|0
 $--notification-content-color: $--color-text-regular !default;
 /// fontSize||Font|1
-$--notification-title-font-size: $--body-medium !default;
+$--notification-title-font-size: $--body-regular !default;
 /// color||Color|0
 $--notification-title-color: $--color-text-primary !default;
 
@@ -768,7 +782,7 @@ $--group-option-flex: 0 0 (1/5) * 100% !default;
 $--group-option-offset-bottom: 12px !default;
 $--group-option-fill-hover: rgba($--color-black, 0.06) !default;
 $--group-title-color: $--color-black !default;
-$--group-title-font-size: $--font-size-base !default;
+$--group-title-font-size: $--body-regular !default;
 $--group-title-width: 66px !default;
 
 /* Tab
@@ -788,9 +802,9 @@ $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 -------------------------- */
 /// fontSize||Font|1
 /// 对应企点large
-$--button-font-size: $--font-size-medium !default;
+$--button-font-size: $--subtitle-regular !default;
 /// fontWeight||Font|1
-$--button-font-weight: $--font-weight-base !default;
+$--button-font-weight: $--font-weight-regular !default;
 /// borderRadius||Border|2
 $--button-border-radius: $--border-radius-base !default;
 /// padding||Spacing|3
@@ -800,7 +814,7 @@ $--button-padding-horizontal: 15px !default;
 
 /// fontSize||Font|1
 /// 暂时不改
-$--button-medium-font-size: $--font-size-base !default;
+$--button-medium-font-size: $--body-regular !default;
 /// borderRadius||Border|2
 $--button-medium-border-radius: $--border-radius-base !default;
 /// padding||Spacing|3
@@ -810,7 +824,7 @@ $--button-medium-padding-horizontal: 20px !default;
 
 /// fontSize||Font|1
 /// 对应企点 medium
-$--button-small-font-size: $--font-size-base !default;
+$--button-small-font-size: $--body-regular !default;
 $--button-small-border-radius: $--border-radius-base !default;
 /// padding||Spacing|3
 $--button-small-padding-vertical: 8px !default;
@@ -818,7 +832,7 @@ $--button-small-padding-vertical: 8px !default;
 $--button-small-padding-horizontal: 15px !default;
 /// fontSize||Font|1
 /// 对应企点 small
-$--button-mini-font-size: $--font-size-extra-small !default;
+$--button-mini-font-size: $--caption-regular !default;
 $--button-mini-border-radius: $--border-radius-base !default;
 /// padding||Spacing|3
 $--button-mini-padding-vertical: 5px !default;
@@ -899,11 +913,11 @@ $--switch-button-size: 16px !default;
 $--dialog-background-color: $--color-bg-1!default;
 $--dialog-box-shadow: $--shadow-large !default;
 /// fontSize||Font|1
-$--dialog-title-font-size: $--title-bold !default;
+$--dialog-title-font-size: $--title-regular !default;
 /// fontSize||Font|1
 $--dialog-content-font-size: $--body-regular !default;
 /// fontLineHeight||LineHeight|2
-$--dialog-font-line-height: $--font-line-height-primary !default;
+$--dialog-font-line-height: $--body-line-height !default;
 /// padding||Spacing|3
 $--dialog-padding-primary: $--spacing-extra-loose !default;
 
@@ -965,7 +979,7 @@ $--popover-arrow-size: 6px !default;
 $--popover-padding: 16px !default;
 $--popover-padding-large: 16px !default;
 /// fontSize||Font|1
-$--popover-title-font-size: $--body-medium !default;
+$--popover-title-font-size: $--body-regular !default;
 /// color||Color|0
 $--popover-title-font-color: $--color-text-primary !default;
 
@@ -1073,7 +1087,7 @@ $--menu-item-hover-fill: $--color-fill-hover !default;
 --------------------------*/
 $--rate-height: 24px !default;
 /// fontSize||Font|1
-$--rate-font-size: $--font-size-base !default;
+$--rate-font-size: $--body-regular !default;
 /// height||Other|3
 $--rate-icon-size: $--size-m !default;
 /// margin||Spacing|2
@@ -1197,7 +1211,7 @@ $--backtop-hover-background-color: $--color-fill-hover !default;
 /// fontSize||Font|1
 $--link-font-size: $--body-regular !default;
 /// fontWeight||Font|1
-$--link-font-weight: $--font-weight-primary !default;
+$--link-font-weight: $--font-weight-regular !default;
 /// color||Color|0
 $--link-default-font-color: $--color-text-primary !default;
 /// color||Color|0
@@ -1225,7 +1239,7 @@ $--calendar-cell-width: 64px !default;
 /* Form
 -------------------------- */
 /// fontSize||Font|1，我们的form比较特殊，这里先不改了，保证文字大小一致即可
-$--form-label-font-size: $--font-size-base !default;
+$--form-label-font-size: $--body-regular !default;
 
 /* Avatar
 --------------------------*/
@@ -1234,7 +1248,7 @@ $--avatar-font-color: $--color-text-white !default;
 /// color||Color|0
 $--avatar-background-color: $--color-gray-4 !default;
 /// fontSize||Font Size|1
-$--avatar-text-font-size: $--font-size-medium !default;
+$--avatar-text-font-size: $--subtitle-regular !default;
 /// fontSize||Font Size|1
 $--avatar-icon-font-size: 16px !default;
 /// borderRadius||Border|2
