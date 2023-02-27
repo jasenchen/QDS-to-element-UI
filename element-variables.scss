@@ -440,7 +440,7 @@ $--checkbox-input-width: 14px !default;
 $--checkbox-border-radius: $--border-radius-base !default;
 /// color||Color|0
 $--checkbox-background-color: $--color-white !default;
-$--checkbox-input-border: $--color-border-normal !default;
+$--checkbox-input-border: $--border-width-base $--border-style-base $--color-border-normal !default;
 
 /// color||Color|0
 $--checkbox-disabled-border-color: $--color-border-disable !default;
@@ -506,7 +506,7 @@ $--radio-input-width: 14px !default;
 $--radio-input-border-radius: $--radius-round !default;
 /// color||Color|0
 $--radio-input-background-color: $--color-bg-1 !default;
-$--radio-input-border: $--color-border-normal !default;
+$--radio-input-border: $--border-width-base $--border-style-base $--color-border-normal !default;
 /// color||Color|0
 $--radio-input-border-color: $--color-border-normal!default;
 /// color||Color|0
@@ -559,7 +559,7 @@ $--radio-button-disabled-checked-fill: $--color-primary-disable !default;
 /* Select
 -------------------------- */
 $--select-border-color-hover: $--color-border-hover!default;
-$--select-disabled-border: $--color-border-disable!default;
+$--select-disabled-border: $--border-width-base $--border-style-base $--color-border-disable!default;
 /// fontSize||Font|1
 $--select-font-size: $--body-regular !default;
 $--select-close-hover-color: $--color-text-secondary !default;
@@ -707,7 +707,7 @@ $--input-font-size: $--body-regular !default;
 $--input-font-color: $--color-text-regular !default;
 /// height||Other|4
 $--input-height: 32px !default;
-$--input-border: $--color-border-normal !default;
+$--input-border:$--border-width-base $--border-style-base $--color-border-normal !default;
 $--input-border-color: $--color-border-normal !default;
 /// borderRadius||Border|2
 $--input-border-radius: $--radius-normal!default;
@@ -722,14 +722,14 @@ $--input-icon-color: $--color-text-caption !default;
 $--input-placeholder-color: $--color-text-caption !default;
 $--input-max-width: 314px !default;
 
-$--input-hover-border: $--color-border-hover !default;
+$--input-hover-border: $--border-width-base $--border-style-base $--color-border-hover !default;
 $--input-clear-hover-color: $--color-text-secondary !default;
 
-$--input-focus-border: $--color-primary-normal !default;
+$--input-focus-border: $--border-width-base $--border-style-base $--color-primary-normal !default;
 $--input-focus-fill: $--color-fill-normal !default;
 
 $--input-disabled-fill: $--color-fill-disable !default;
-$--input-disabled-border: $--color-border-disable !default;
+$--input-disabled-border: $--border-width-base $--border-style-base $--color-border-disable !default;
 $--input-disabled-color: $--color-fill-disable !default;
 $--input-disabled-placeholder-color: $--color-fill-disable !default;
 
@@ -911,7 +911,7 @@ $--dialog-padding-primary: $--spacing-extra-loose !default;
 -------------------------- */
 /// color||Color|0
 $--table-border-color: $--color-divider-normal!default;
-$--table-border: 1px solid $--color-border-normal !default;
+$--table-border: $--border-width-base $--border-style-base $--color-border-normal !default;
 /// color||Color|0
 $--table-font-color: $--color-text-primary !default;
 /// color||Color|0
@@ -1217,7 +1217,7 @@ $--link-info-font-color: $--color-text-caption !default;
 /* Calendar
 --------------------------*/
 /// border||Other|4
-$--calendar-border: $--color-border-normal !default;
+$--calendar-border: $--border-width-base $--border-style-base $--color-border-normal !default;
 /// color||Other|4
 $--calendar-selected-background-color: $--color-bg-1 !default;
 $--calendar-cell-width: 64px !default;
@@ -1257,7 +1257,7 @@ $--empty-bottom-margin-top: 20px !default;
 -------------------------- */
 $--descriptions-header-margin-bottom: 20px !default;
 $--descriptions-title-font-size: 16px !default;
-$--descriptions-table-border: 1px solid $--border-color-lighter !default;
+$--descriptions-table-border: $--border-width-base $--border-style-base $--border-color-lighter !default;
 $--descriptions-item-bordered-label-background: #fafafa !default;
 
 /* Skeleton 
